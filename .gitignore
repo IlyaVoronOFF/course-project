@@ -13,3 +13,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/Vagrantfile
+/_ide_helper.php
+/composer.phar
+/.phpstorm.meta.php
