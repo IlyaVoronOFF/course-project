@@ -158,68 +158,68 @@
     </div>
     <!-- Product Area End Here -->
 
-    <div class="banner-area banner-style-3 section-space-top-90">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 pt-md-8 pt-lg-0">
-                    <div class="banner-item img-hover-effect">
-                        <div class="banner-img img-zoom-effect">
-                            <img class="img-full" src="assets/images/banner/2-1-620x257.jpg" alt="Banner Image">
-                            <div class="inner-content text-white">
-                                <h3 class="offer">From $96</h3>
-                                <h2 class="title">Latest <br> Car Wheel</h2>
-                                <div class="button-wrap">
-                                    <a class="btn btn-custom-size btn-primary" href="shop.html">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pt-8 pt-lg-0">
-                    <div class="banner-item img-hover-effect">
-                        <div class="banner-img img-zoom-effect">
-                            <img class="img-full" src="assets/images/banner/2-2-620x257.jpg" alt="Banner Image">
-                            <div class="inner-content text-white">
-                                <h3 class="offer">From $96</h3>
-                                <h2 class="title">Latest <br> Car Wheel</h2>
-                                <div class="button-wrap">
-                                    <a class="btn btn-custom-size btn-primary" href="shop.html">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pt-8">
-                    <div class="banner-item img-hover-effect">
-                        <div class="banner-img img-zoom-effect">
-                            <img class="img-full" src="assets/images/banner/2-3-620x257.jpg" alt="Banner Image">
-                            <div class="inner-content text-right text-night-rider">
-                                <h3 class="offer">From $96</h3>
-                                <h2 class="title">Latest <br> Car Wheel</h2>
-                                <div class="button-wrap">
-                                    <a class="btn btn-custom-size btn-primary" href="shop.html">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pt-8">
-                    <div class="banner-item img-hover-effect">
-                        <div class="banner-img img-zoom-effect">
-                            <img class="img-full" src="assets/images/banner/2-4-620x257.jpg" alt="Banner Image">
-                            <div class="inner-content text-right text-night-rider">
-                                <h3 class="offer">From $96</h3>
-                                <h2 class="title">Latest <br> Car Wheel</h2>
-                                <div class="button-wrap">
-                                    <a class="btn btn-custom-size btn-primary" href="shop.html">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--    <div class="banner-area banner-style-3 section-space-top-90">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-6 pt-md-8 pt-lg-0">--}}
+{{--                    <div class="banner-item img-hover-effect">--}}
+{{--                        <div class="banner-img img-zoom-effect">--}}
+{{--                            <img class="img-full" src="assets/images/banner/2-1-620x257.jpg" alt="Banner Image">--}}
+{{--                            <div class="inner-content text-white">--}}
+{{--                                <h3 class="offer">From $96</h3>--}}
+{{--                                <h2 class="title">Latest <br> Car Wheel</h2>--}}
+{{--                                <div class="button-wrap">--}}
+{{--                                    <a class="btn btn-custom-size btn-primary" href="shop.html">Shop Now</a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-6 pt-8 pt-lg-0">--}}
+{{--                    <div class="banner-item img-hover-effect">--}}
+{{--                        <div class="banner-img img-zoom-effect">--}}
+{{--                            <img class="img-full" src="assets/images/banner/2-2-620x257.jpg" alt="Banner Image">--}}
+{{--                            <div class="inner-content text-white">--}}
+{{--                                <h3 class="offer">From $96</h3>--}}
+{{--                                <h2 class="title">Latest <br> Car Wheel</h2>--}}
+{{--                                <div class="button-wrap">--}}
+{{--                                    <a class="btn btn-custom-size btn-primary" href="shop.html">Shop Now</a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-6 pt-8">--}}
+{{--                    <div class="banner-item img-hover-effect">--}}
+{{--                        <div class="banner-img img-zoom-effect">--}}
+{{--                            <img class="img-full" src="assets/images/banner/2-3-620x257.jpg" alt="Banner Image">--}}
+{{--                            <div class="inner-content text-right text-night-rider">--}}
+{{--                                <h3 class="offer">From $96</h3>--}}
+{{--                                <h2 class="title">Latest <br> Car Wheel</h2>--}}
+{{--                                <div class="button-wrap">--}}
+{{--                                    <a class="btn btn-custom-size btn-primary" href="shop.html">Shop Now</a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-6 pt-8">--}}
+{{--                    <div class="banner-item img-hover-effect">--}}
+{{--                        <div class="banner-img img-zoom-effect">--}}
+{{--                            <img class="img-full" src="assets/images/banner/2-4-620x257.jpg" alt="Banner Image">--}}
+{{--                            <div class="inner-content text-right text-night-rider">--}}
+{{--                                <h3 class="offer">From $96</h3>--}}
+{{--                                <h2 class="title">Latest <br> Car Wheel</h2>--}}
+{{--                                <div class="button-wrap">--}}
+{{--                                    <a class="btn btn-custom-size btn-primary" href="shop.html">Shop Now</a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
     <!-- Begin Product Area -->
     <div class="product-area section-space-top-100">
@@ -235,9 +235,9 @@
                                 <img class="img-full" src="assets/images/product/medium-size/special-deals/banner/2-1-290x350.jpg" alt="Product Banner">
                             </a>
                             <div class="product-banner-content text-white">
-                                <h2 class="offer mb-4">Have a Special <br> Discount</h2>
+                                <h2 class="offer mb-4">Получите личную <br> Скидку</h2>
                                 <div class="button-wrap">
-                                    <a class="btn btn-custom-size btn-white btn-hover-primary" href="shop.html">Shop Now</a>
+                                    <a class="btn btn-custom-size btn-white btn-hover-primary" href="shop.html">Купить</a>
                                 </div>
                             </div>
                             <!-- Add Arrows -->
@@ -265,29 +265,29 @@
                                     <a class="product-name pb-1" href="shop.html">Fuel Injector</a>
                                     <div class="price-box">
                                         <div class="price-box-holder">
-                                            <span>Price:</span>
+                                            <span>Цена:</span>
                                             <span class="new-price text-primary">$130.00</span>
                                         </div>
                                     </div>
                                     <div class="product-add-action">
                                         <ul>
                                             <li>
-                                                <a href="cart.html" data-tippy="Add to cart" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                <a href="cart.html" data-tippy="В корзину" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
                                                     <i class="pe-7s-cart"></i>
                                                 </a>
                                             </li>
                                             <li class="quuickview-btn" data-bs-toggle="modal" data-bs-target="#quickModal">
-                                                <a href="#" data-tippy="Quickview" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                <a href="#" data-tippy="Просмотр" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
                                                     <i class="pe-7s-look"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" data-tippy="Add to wishlist" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                <a href="wishlist.html" data-tippy="В избранное" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
                                                     <i class="pe-7s-like"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="compare.html" data-tippy="Add to compare" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                <a href="compare.html" data-tippy="Сравнить" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
                                                     <i class="pe-7s-shuffle"></i>
                                                 </a>
                                             </li>
@@ -305,29 +305,29 @@
                                     <a class="product-name pb-1" href="shop.html">A/C Compressor</a>
                                     <div class="price-box">
                                         <div class="price-box-holder">
-                                            <span>Price:</span>
+                                            <span>Цена:</span>
                                             <span class="new-price text-primary">$150.00</span>
                                         </div>
                                     </div>
                                     <div class="product-add-action">
                                         <ul>
                                             <li>
-                                                <a href="cart.html" data-tippy="Add to cart" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                <a href="cart.html" data-tippy="В корзину" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
                                                     <i class="pe-7s-cart"></i>
                                                 </a>
                                             </li>
                                             <li class="quuickview-btn" data-bs-toggle="modal" data-bs-target="#quickModal">
-                                                <a href="#" data-tippy="Quickview" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                <a href="#" data-tippy="Просмотр" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
                                                     <i class="pe-7s-look"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" data-tippy="Add to wishlist" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                <a href="wishlist.html" data-tippy="В избранное" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
                                                     <i class="pe-7s-like"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="compare.html" data-tippy="Add to compare" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                <a href="compare.html" data-tippy="Сравнить" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
                                                     <i class="pe-7s-shuffle"></i>
                                                 </a>
                                             </li>
@@ -394,8 +394,8 @@
                                 <img src="assets/images/shipping/icon/plane.png" alt="Shipping Icon">
                             </div>
                             <div class="shipping-content">
-                                <h2 class="title">Free Shipping</h2>
-                                <p class="short-desc mb-0">Provide free home delivery for all product over $100</p>
+                                <h2 class="title">Бесплатные доставки</h2>
+                                <p class="short-desc mb-0">Предоставляем бесплатные доставки на дом при заказе от $100</p>
                             </div>
                         </div>
                     </div>
@@ -405,8 +405,8 @@
                                 <img src="assets/images/shipping/icon/earphones.png" alt="Shipping Icon">
                             </div>
                             <div class="shipping-content">
-                                <h2 class="title">Online Support</h2>
-                                <p class="short-desc mb-0">To satisfy our customer we try to give support online</p>
+                                <h2 class="title">Быстрая доставка</h2>
+                                <p class="short-desc mb-0">Обеспечиваем доставку ваших заказов в кратчайшие сроки</p>
                             </div>
                         </div>
                     </div>
@@ -416,8 +416,8 @@
                                 <img src="assets/images/shipping/icon/shield.png" alt="Shipping Icon">
                             </div>
                             <div class="shipping-content">
-                                <h2 class="title">Secure Payment</h2>
-                                <p class="short-desc mb-0">We ensure our product Good quality all times</p>
+                                <h2 class="title">Безопасные платежи</h2>
+                                <p class="short-desc mb-0">Гарантируем хорошее качество товара</p>
                             </div>
                         </div>
                     </div>
