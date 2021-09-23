@@ -1,0 +1,10 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/admin/app.js": "/js/admin/app.js",
+    "/assets/css/admin/app.min.css": "/assets/css/admin/app.min.css",
+    "/assets/css/admin/app.css": "/assets/css/admin/app.css",
+    "/assets/css/admin/bootstrap.min.css": "/assets/css/admin/bootstrap.min.css",
+    "/assets/css/admin/icons.css": "/assets/css/admin/icons.css",
+    "/assets/css/admin/bootstrap.css": "/assets/css/admin/bootstrap.css",
+    "/assets/css/admin/icons.min.css": "/assets/css/admin/icons.min.css"
+}

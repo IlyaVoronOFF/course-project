@@ -17,3 +17,5 @@ yarn-error.log
 /_ide_helper.php
 /composer.phar
 /.phpstorm.meta.php
+/public/js/
+/public/assets/css/admin
