@@ -13,6 +13,11 @@ class GoodsController extends Controller
      */
     public function index()
     {
+        return view('admin.goods');
+    }
+
+    public function shop()
+    {
         return view('shop.index');
     }
 
