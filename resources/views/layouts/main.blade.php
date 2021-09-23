@@ -70,7 +70,7 @@
 {{--                                            <a href="{{ route('home') }}">Home</a>--}}
 {{--                                        </li>--}}
                                         <li class="megamenu-holder">
-                                            <a href="shop.html">Категории
+                                            <a href="{{ route("shop.index") }}">Категории
                                                 <i class="pe-7s-angle-down"></i>
                                             </a>
                                             <ul class="drop-menu megamenu">
@@ -78,7 +78,7 @@
                                                     <span class="title">Категория 1</span>
                                                     <ul>
                                                         <li>
-                                                            <a href="shop.html">Shop Default</a>
+                                                            <a href="{{ route("shop.index") }}">Shop Default</a>
                                                         </li>
                                                         <li>
                                                             <a href="shop-grid-fullwidth.html">Shop Grid Fullwidth</a>
@@ -151,7 +151,7 @@
                                             </ul>
                                         </li>
                                         <li class="drop-holder">
-                                            <a href="#">Категории
+                                            <a href="{{ route('shop.index') }}">Категории
                                                 <i class="pe-7s-angle-down"></i>
                                             </a>
                                             <ul class="drop-menu">
@@ -288,8 +288,9 @@
                                             </a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="shop.html">
-                                                        <span class="mm-text">Подкатегория 1</span>
+                                                    <a href="{{ route("shop.index") }}">
+                                                        <span class="mm-text">Shop Default</span>
+
                                                     </a>
                                                 </li>
                                                 <li>
@@ -371,22 +372,22 @@
                         <li class="minicart-product">
                             <a class="product-item_remove" href="#"><i
                                     class="pe-7s-trash" data-tippy="Wanna Remove?" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder"></i></a>
-                            <a href="shop.html" class="product-item_img">
+                            <a href="{{ route("shop.index") }}" class="product-item_img">
                                 <img class="img-full" src="assets/images/product/small-size/1-1-70x70.png" alt="Product Image">
                             </a>
                             <div class="product-item_content">
-                                <a class="product-item_title" href="shop.html">Tail Light</a>
+                                <a class="product-item_title" href="{{ route("shop.index") }}">Tail Light</a>
                                 <span class="product-item_quantity">1 x $80.00</span>
                             </div>
                         </li>
                         <li class="minicart-product">
                             <a class="product-item_remove" href="#"><i
                                     class="pe-7s-trash" data-tippy="Wanna Remove?" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder"></i></a>
-                            <a href="shop.html" class="product-item_img">
+                            <a href="{{ route("shop.index") }}" class="product-item_img">
                                 <img class="img-full" src="assets/images/product/small-size/1-2-70x70.png" alt="Product Image">
                             </a>
                             <div class="product-item_content">
-                                <a class="product-item_title" href="shop.html">Wiper Blades</a>
+                                <a class="product-item_title" href="{{ route("shop.index") }}">Wiper Blades</a>
                                 <span class="product-item_quantity">1 x $80.00</span>
                             </div>
                         </li>
@@ -394,11 +395,11 @@
                             <a class="product-item_remove" href="#">
                                 <i class="pe-7s-trash" data-tippy="Wanna Remove?" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder"></i>
                             </a>
-                            <a href="shop.html" class="product-item_img">
+                            <a href="{{ route("shop.index") }}" class="product-item_img">
                                 <img class="img-full" src="assets/images/product/small-size/1-3-70x70.png" alt="Product Image">
                             </a>
                             <div class="product-item_content">
-                                <a class="product-item_title" href="shop.html">Suspension</a>
+                                <a class="product-item_title" href="{{ route("shop.index") }}">Suspension</a>
                                 <span class="product-item_quantity">1 x $80.00</span>
                             </div>
                         </li>
@@ -406,11 +407,11 @@
                             <a class="product-item_remove" href="#">
                                 <i class="pe-7s-trash" data-tippy="Wanna Remove?" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder"></i>
                             </a>
-                            <a href="shop.html" class="product-item_img">
+                            <a href="{{ route("shop.index") }}" class="product-item_img">
                                 <img class="img-full" src="assets/images/product/small-size/1-4-70x70.png" alt="Product Image">
                             </a>
                             <div class="product-item_content">
-                                <a class="product-item_title" href="shop.html">Air Filter</a>
+                                <a class="product-item_title" href="{{ route("shop.index") }}">Air Filter</a>
                                 <span class="product-item_quantity">1 x $80.00</span>
                             </div>
                         </li>
@@ -418,11 +419,11 @@
                             <a class="product-item_remove" href="#">
                                 <i class="pe-7s-trash" data-tippy="Wanna Remove?" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder"></i>
                             </a>
-                            <a href="shop.html" class="product-item_img">
+                            <a href="{{ route("shop.index") }}" class="product-item_img">
                                 <img class="img-full" src="assets/images/product/small-size/1-5-70x70.png" alt="Product Image">
                             </a>
                             <div class="product-item_content">
-                                <a class="product-item_title" href="shop.html">Car Brakes</a>
+                                <a class="product-item_title" href="{{ route("shop.index") }}">Car Brakes</a>
                                 <span class="product-item_quantity">1 x $80.00</span>
                             </div>
                         </li>
