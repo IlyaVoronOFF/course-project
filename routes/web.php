@@ -17,3 +17,6 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/admin', function () {
+    return view('admin.index');
+})->name('admin');
