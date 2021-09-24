@@ -4,7 +4,7 @@
 
   <div class="page-content">
     <h1>
-      Админ-панель
+      Товары
     </h1>
   </div>
 

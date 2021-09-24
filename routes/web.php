@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\GoodsController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,11 +21,16 @@ Route::get('/', function () {
 })->name('home');
 
 
-Route::get('/admin', function () {
-    return view('admin.index');
-})->name('admin');
+// Route::get('/admin', function () {
+//     return view('admin.index');
+// })->name('admin');
 
-Route::resource('shop', GoodsController::class);
+//admin
+Route::group(['prefix' => 'admin'], function () {
+    Route::view('/', 'admin.index')->name('admin');
+    Route::resource('users', UserController::class);
+    Route::resource('orders', OrderController::class);
+    Route::resource('goods', GoodsController::class);
+});
 
-
-
+Route::get('shop',  [GoodsController::class, 'shop'])->name('shop');
