@@ -50,6 +50,7 @@
 /* Search */
 
 .app-search {
+    margin: 0 12px;
     padding: calc(#{$header-height - 38px} / 2) 0;
 
     .form-control {

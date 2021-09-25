@@ -4,7 +4,7 @@
 
   <div class="page-content">
     <h1>
-      Админ-панель
+      Заказы
     </h1>
   </div>
 
