@@ -61,7 +61,7 @@
               <div class="header-middle-wrap position-relative">
 
                 <a href="{{ route('home') }}" class="header-logo">
-                  <img src="assets/images/logo/dark.png" alt="Header Logo">
+                  <img src="assets/images/logo/dark_new.png" alt="Header Logo">
                 </a>
 
                 <div class="main-menu d-none d-lg-block">
@@ -477,7 +477,7 @@
               <div class="widget-item">
                 <div class="footer-logo pb-4">
                   <a href="{{ route('home') }}">
-                    <img src="assets/images/logo/light.png" alt="Logo">
+                    <img src="assets/images/logo/light_new.png" alt="Logo">
                   </a>
                 </div>
                 <p class="short-desc mb-2">Lorem ipsum dolor sit amet, consectet adipisicing elit, sed do eiusmod
