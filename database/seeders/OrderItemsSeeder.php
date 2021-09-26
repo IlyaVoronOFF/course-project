@@ -28,8 +28,8 @@ class OrderItemsSeeder extends Seeder
             $price = $faker->numerify('###');
 
             $data[] = [
-                'order_id' => rand(1, 20),
-                'product_id' => rand(1, 100),
+                'order_id' => $i % 20 + 1,
+                'product_id' => $i + 1,
                 'count' => $count,
                 'price' =>  $price,
                 'total_price' => $count * $price,
