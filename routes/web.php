@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\GoodsController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -30,7 +30,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::view('/', 'admin.index')->name('admin');
     Route::resource('users', UserController::class);
     Route::resource('orders', OrderController::class);
-    Route::resource('goods', GoodsController::class);
+    Route::resource('products', ProductController::class);
 });
 
-Route::get('shop',  [GoodsController::class, 'shop'])->name('shop');
+Route::get('shop',  [ProductController::class, 'shop'])->name('shop');

@@ -123,7 +123,7 @@
             <li class="menu-title">Категории</li>
 
             <li>
-              <a href="{{ route('goods.index') }}" class="waves-effect">
+              <a href="{{ route('products.index') }}" class="waves-effect">
                 <i class="ti-package"></i>
                 <span>Товары</span>
               </a>
