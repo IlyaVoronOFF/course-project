@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
 class GoodsController extends Controller
@@ -18,7 +19,11 @@ class GoodsController extends Controller
 
     public function shop()
     {
-        return view('shop.index');
+//        dump(Menu::all());
+
+        return view('shop.index',[
+            'menu' => Menu::all()
+        ]);
     }
 
     /**
