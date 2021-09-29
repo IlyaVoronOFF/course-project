@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Models\Menu;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +19,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home',[
+        'menu' =>  Menu::all()
+    ]);
 })->name('home');
 
 
@@ -33,4 +37,4 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('products', ProductController::class);
 });
 
-Route::get('shop',  [ProductController::class, 'shop'])->name('shop');
+Route::get('/catalog',  [ProductController::class, 'shop'])->name('shop');

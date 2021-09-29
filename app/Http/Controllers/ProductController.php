@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Menu;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -23,7 +24,11 @@ class ProductController extends Controller
 
     public function shop()
     {
-        return view('shop.index');
+        $products = Product::paginate(12);
+        return view('shop.index',[
+            'menu' => Menu::all(),
+            'products' => $products,
+        ]);
     }
 
     /**

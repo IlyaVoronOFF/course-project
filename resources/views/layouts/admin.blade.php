@@ -31,10 +31,10 @@
           <div class="navbar-brand-box">
             <a href="{{ route('admin') }}" class="logo logo-light">
               <span class="logo-sm">
-                <img src="{{ asset('assets/images/admin/logo-sm.png') }}" alt="" height="22">
+                <img src="{{ asset('assets/images/admin/logo-sm.png') }}" alt="" height="40">
               </span>
               <span class="logo-lg">
-                <img src="{{ asset('assets/images/admin/logo-light.png') }}" alt="" height="18">
+                <img src="{{ asset('assets/images/admin/logo-light.png') }}" alt="" height="40">
               </span>
             </a>
           </div>
