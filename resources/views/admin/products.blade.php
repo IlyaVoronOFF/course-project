@@ -3,9 +3,12 @@
 @section('main')
 
   <div class="page-content">
-    <h1>
-      Товары
-    </h1>
+      <div class="d-flex justify-content-between align-items-center">
+          <h1>
+            Товары
+          </h1>
+          <a href="{{route('products.create')}}" class="btn btn-dark">Добавить новый</a>
+      </div>
     <div class="table-responsive">
       <table class="table table-striped table-sm">
         <thead>
