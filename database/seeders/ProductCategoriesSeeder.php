@@ -21,10 +21,10 @@ class ProductCategoriesSeeder extends Seeder
     {
         $data = [];
 
-        for ($i = 0; $i < 50; $i++) {
+        for ($i = 1; $i < 100; $i++) {
             $data[] = [
                 'category_id' => rand(1, 9),
-                'product_id' => rand(1, 100),
+                'product_id' => $i,
             ];
         }
 

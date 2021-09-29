@@ -10,6 +10,12 @@ class Category extends Model
 {
     use HasFactory;
 
+    public function products()
+    {
+        return $this->belongsToMany(Product::class)
+            ->as('product_categories');
+    }
+
     public function menu(): BelongsToMany
     {
         return $this->belongsToMany(Menu::class,'categories_menu');

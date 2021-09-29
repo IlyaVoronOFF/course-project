@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Menu;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -15,7 +16,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('admin.goods');
+
+        $products = Product::with('country')->paginate(20);
+
+        return view('admin.products', ['products' => $products]);
     }
 
     public function shop()
@@ -34,7 +38,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all()->sortBy('name');
+        return view('admin.productCreate', ['categories' => $categories]);
     }
 
     /**

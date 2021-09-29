@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\GoodsController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
@@ -34,7 +34,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::view('/', 'admin.index')->name('admin');
     Route::resource('users', UserController::class);
     Route::resource('orders', OrderController::class);
-    Route::resource('goods', ProductController::class);
+    Route::resource('products', ProductController::class);
 });
 
 Route::get('/catalog',  [ProductController::class, 'shop'])->name('shop');
