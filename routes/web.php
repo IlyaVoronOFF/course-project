@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Models\Menu;
 use Illuminate\Support\Facades\Route;
