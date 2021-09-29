@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GoodsController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Models\Menu;
 use Illuminate\Support\Facades\Route;
@@ -33,7 +34,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::view('/', 'admin.index')->name('admin');
     Route::resource('users', UserController::class);
     Route::resource('orders', OrderController::class);
-    Route::resource('goods', GoodsController::class);
+    Route::resource('goods', ProductController::class);
 });
 
-Route::get('/catalog',  [GoodsController::class, 'shop'])->name('shop');
+Route::get('/catalog',  [ProductController::class, 'shop'])->name('shop');

@@ -19,8 +19,6 @@ class GoodsController extends Controller
 
     public function shop()
     {
-//        dump(Menu::all());
-
         return view('shop.index',[
             'menu' => Menu::all()
         ]);
