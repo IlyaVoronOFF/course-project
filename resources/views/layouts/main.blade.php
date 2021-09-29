@@ -211,6 +211,7 @@
                       </button>
                       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingButton">
                         <li><a class="dropdown-item" href="my-account.html">Аккаунт</a></li>
+                          <li><a class="dropdown-item" href="{{ route('admin') }}">Админка</a></li>
                         <li><a class="dropdown-item" href="login-register.html">Войти | Регистрация</a></li>
                       </ul>
                     </li>
