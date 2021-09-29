@@ -22,7 +22,7 @@ class MenuSeeder extends Seeder
         $data = [
             [
                 'title' => 'Главная',
-                'link' => '/home',
+                'link' => '/',
                 'alias' => 'home',
 
             ],

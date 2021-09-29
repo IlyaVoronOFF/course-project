@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Category extends Model
+class Menu extends Model
 {
     use HasFactory;
-
-    public function menu(): BelongsToMany
+    protected $table = 'menu';
+    public function category():BelongsToMany
     {
-        return $this->belongsToMany(Menu::class,'categories_menu');
+        return $this->belongsToMany(Category::class,'categories_menu');
     }
 }
