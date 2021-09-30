@@ -15,6 +15,8 @@
             {{ session('success') }}
         </div>
       @endif
+      <div class="alert alert-success" hidden role="alert">
+      </div>
       <div class="alert alert-danger" hidden role="alert">
       </div>
     <div class="table-responsive">
@@ -54,8 +56,15 @@
 
 @endsection
 
-@push('js-product-delete')
+@push('js-products')
   <script>
+    const url = new URL(location.href);
+    const del = url.searchParams.get('del');
+    if (del === 'ok') {
+        const alertSuccess = document.querySelector('.alert-success[hidden]');
+        alertSuccess.innerText = 'Товар успешно удален';
+        alertSuccess.removeAttribute('hidden');
+    }
     const deleteLinks = document.querySelector('.table-responsive').querySelectorAll('.delete');
     deleteLinks.forEach(link => {
       link.addEventListener('click', (e) => {
@@ -73,13 +82,13 @@
         })
         .then(data => {
             if (data.success) {
-                location.reload();
+                location.href = location.href + '&del=ok';
             } else {
-                const alertEl = document.querySelector('.alert');
-                alertEl.innerText = data.errorCode === '23000' ?
+                const alertDanger = document.querySelector('.alert-danger');
+                alertDanger.innerText = data.errorCode === '23000' ?
                     `Нельзя удалить товар id=${productId}, есть связанные заказы` :
                     'Ошибка при удалении товара';
-                alertEl.removeAttribute('hidden');
+                alertDanger.removeAttribute('hidden');
                 console.log(data);
             }
         })

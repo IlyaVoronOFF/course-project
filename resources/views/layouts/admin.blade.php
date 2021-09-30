@@ -181,7 +181,7 @@
 
   <script src="{{ asset('js/admin/app.js') }}"></script>
 
-  @stack('js-product-delete')
+  @stack('js-products')
 
 </body>
 
