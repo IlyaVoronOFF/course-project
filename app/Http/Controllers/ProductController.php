@@ -7,6 +7,7 @@ use App\Models\Country;
 use App\Models\Menu;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
@@ -170,8 +171,21 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        try {
+            DB::table('product_categories')->where('product_id', $product->id)->delete();
+            $product->delete();
+            return new JsonResponse([
+                'message' => 'Товар удален',
+                'success' => true
+            ], 200);
+        } catch (\Exception $ex) {
+            return new JsonResponse([
+                'message' => $ex->getMessage(),
+                'errorCode' => $ex->getCode(),
+                'success' => false
+            ], 500);
+        }
     }
 }

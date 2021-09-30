@@ -30,6 +30,7 @@ class ProductsSeeder extends Seeder
                 'intro_desc' => $faker->text(50),
                 'description' => $faker->text(250),
                 'price' => $faker->numerify('####'),
+                'published' => 1
             ];
         }
 
