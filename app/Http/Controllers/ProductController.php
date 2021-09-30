@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Country;
 use App\Models\Menu;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -38,8 +39,12 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $categories = Category::all()->sortBy('name');
-        return view('admin.productCreate', ['categories' => $categories]);
+        $categories = Category::all(['id', 'name'])->sortBy('name');
+        $countries = Country::all(['id', 'name'])->sortBy('name');
+        return view('admin.productCreate', [
+            'categories' => $categories,
+            'countries' => $countries
+        ]);
     }
 
     /**
