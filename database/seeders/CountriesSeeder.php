@@ -24,7 +24,7 @@ class CountriesSeeder extends Seeder
         $data = [];
 
         for ($i = 0; $i < 50; $i++) {
-            $country = $faker->country();
+            $country = $faker->unique()->country();
             $data[] = [
                 'name' => $country,
                 '3_code' => substr($country, 0, 3),
