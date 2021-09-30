@@ -19,7 +19,7 @@ class ProductController extends Controller
     public function index()
     {
 
-        $products = Product::with('country')->paginate(20);
+        $products = Product::with(['category', 'country'])->paginate(20);
 
         return view('admin.products', ['products' => $products]);
     }
@@ -108,9 +108,24 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
-        //
+        $categories = Category::all(['id', 'name'])->sortBy('name');
+        $countries = Country::all(['id', 'name'])->sortBy('name');
+
+        $productCategories = [];
+        foreach ($product->category as $category) {
+            $productCategories[] = $category['id'];
+        }
+        // dd($productCategories);
+
+        return view('admin.productEdit', [
+            'categories' => $categories,
+            'productCategories' => $productCategories,
+            'product' => $product,
+            'countries' => $countries
+        ]);
+
     }
 
     /**
@@ -120,9 +135,33 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'string'],
+            'intro_desc' => ['required', 'string'],
+            'description' => ['required', 'string'],
+            'categories_id' => ['required'],
+            'country_id' => ['required', 'integer'],
+            'price' => ['required', 'integer'],
+            'published' => ['boolean']
+        ]);
+
+        $data = $request->only('name', 'intro_desc', 'description', 'country_id', 'price', 'published');
+
+        $updateStatus = $product->fill($data)->save();
+
+        if ($updateStatus) {
+            $insertData = [];
+            foreach ($request->categories_id as $categoryId) {
+                $insertData[] = ['category_id' => $categoryId, 'product_id' => $product->id];
+            }
+            DB::table('product_categories')->insertOrIgnore($insertData);
+
+            return redirect()->route('products.index')->with('success', 'Товар успешно изменен');
+        }
+
+        return back()->with('fail', 'Ошибка изменения товара');
     }
 
     /**
