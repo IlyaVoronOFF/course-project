@@ -61,7 +61,7 @@
         </select>
       </div>
       <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="product-published"  name="published" value="1" @if (null !== $product->published) checked @endif>
+        <input type="checkbox" class="form-check-input" id="product-published"  name="published" value="1" @if ($product->published === 1) checked @endif>
         <label class="form-check-label" for="product-published">Опубликован</label>
       </div>
       <button type="submit" class="btn btn-primary">Изменить</button>

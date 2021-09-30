@@ -117,7 +117,6 @@ class ProductController extends Controller
         foreach ($product->category as $category) {
             $productCategories[] = $category['id'];
         }
-        // dd($productCategories);
 
         return view('admin.productEdit', [
             'categories' => $categories,
@@ -147,7 +146,8 @@ class ProductController extends Controller
             'published' => ['boolean']
         ]);
 
-        $data = $request->only('name', 'intro_desc', 'description', 'country_id', 'price', 'published');
+        $data = $request->only('name', 'intro_desc', 'description', 'country_id', 'price');
+        $data['published'] = $request->published ?? 0;
 
         $updateStatus = $product->fill($data)->save();
 
