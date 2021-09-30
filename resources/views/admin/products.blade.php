@@ -36,9 +36,9 @@
               <td>{{ $product->updated_at }}</td>
               <td>{{ $product->country->name }}</td>
               <td>
-                <a href="#" class="text-primary">Edit</a>
+                <a href="{{ route('products.edit', ['product' => $product]) }}" class="text-primary">Изм.</a>
                 &nbsp;|&nbsp;
-                <a href="#" rel="deletion" data-id="{{ $product->id }}" class="text-danger delete">Delete</a>
+                <a href="#" rel="deletion" data-id="{{ $product->id }}" class="text-danger delete">Удалить</a>
               </td>
             </tr>
           @endforeach
