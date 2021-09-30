@@ -9,6 +9,12 @@
           </h1>
           <a href="{{route('products.create')}}" class="btn btn-dark">Добавить новый</a>
       </div>
+
+      @if (session('success'))
+        <div class="alert alert-success" role="alert">
+            {{ session('success') }}
+        </div>
+      @endif
     <div class="table-responsive">
       <table class="table table-striped table-sm">
         <thead>
