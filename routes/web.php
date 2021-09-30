@@ -24,10 +24,6 @@ Route::get('/', function () {
 })->name('home');
 
 
-// Route::get('/admin', function () {
-//     return view('admin.index');
-// })->name('admin');
-
 //admin
 Route::group(['prefix' => 'admin'], function () {
     Route::view('/', 'admin.index')->name('admin');

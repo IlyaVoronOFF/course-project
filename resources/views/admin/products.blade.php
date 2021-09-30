@@ -15,6 +15,8 @@
             {{ session('success') }}
         </div>
       @endif
+      <div class="alert alert-danger" hidden role="alert">
+      </div>
     <div class="table-responsive">
       <table class="table table-striped table-sm">
         <thead>
@@ -51,3 +53,37 @@
   </div>
 
 @endsection
+
+@push('js-product-delete')
+  <script>
+    const deleteLinks = document.querySelector('.table-responsive').querySelectorAll('.delete');
+    deleteLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const productId = e.target.dataset.id;
+        fetch(`/admin/products/${productId}`, {
+          method: 'DELETE',
+          headers: {
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+            'Accept': 'text/html'
+          }
+        })
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                const alertEl = document.querySelector('.alert');
+                alertEl.innerText = data.errorCode === '23000' ?
+                    `Нельзя удалить товар id=${productId}, есть связанные заказы` :
+                    'Ошибка при удалении товара';
+                alertEl.removeAttribute('hidden');
+                console.log(data);
+            }
+        })
+      })
+    });
+  </script>
+@endpush
