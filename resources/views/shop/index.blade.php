@@ -346,7 +346,7 @@
                                                                     <i class="pe-7s-cart"></i>
                                                                 </a>
                                                             </li>
-                                                            <li class="quuickview-btn" data-bs-toggle="modal" data-bs-target="#quickModal">
+                                                            <li class="quuickview-btn" data-bs-toggle="modal" data-bs-target="#quickModal_{{$product->id}}">
                                                                 <a href="#" data-tippy="Quickview" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
                                                                     <i class="pe-7s-look"></i>
                                                                 </a>
@@ -367,7 +367,7 @@
                                             </div>
                                         </div>
                                             <!-- Begin Modal Area -->
-                                            <div class="modal quick-view-modal fade" id="quickModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                                            <div class="modal quick-view-modal fade" id="quickModal_{{$product->id}}" data-bs-backdrop="static" data-bs-keyboard="false"
                                                  tabindex="-1" aria-labelledby="quickModal" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-centered">
                                                     <div class="modal-content">
