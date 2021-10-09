@@ -33,3 +33,4 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/catalog',  [ProductController::class, 'shop'])->name('shop');
+Route::get('/{id}', [ProductController::class, 'show'])->name('product.id');

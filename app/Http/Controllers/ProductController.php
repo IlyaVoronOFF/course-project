@@ -100,7 +100,19 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = Product::find($id);
+        if ($product){
+            $categories = $product->category;
+            $country = $product->country;
+            return view('shop.show', [
+                'product'=>$product,
+                'categories'=>$categories,
+                'country'=>$country,
+                'menu' =>  Menu::all()
+            ]);
+        } else return view('404',[
+            'menu' =>  Menu::all()
+        ]);
     }
 
     /**
