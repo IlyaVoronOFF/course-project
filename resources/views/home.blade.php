@@ -81,6 +81,7 @@
                 <h2 class="title mb-0">Категории</h2>
             </div>
             <div class="row">
+                @foreach($categories as $category)
                 <div class="product-custom-col col-12">
                     <div class="product-category-item">
                         <a class="product-category-img img-zoom-effect" href="shop.html">
@@ -88,71 +89,12 @@
                         </a>
                         <div class="product-category-content pt-5">
                             <h2 class="title">
-                                <a href="shop.html">Категория</a>
+                                <a href="shop.html">{{ $category->name }}</a>
                             </h2>
                         </div>
                     </div>
                 </div>
-                <div class="product-custom-col col-12">
-                    <div class="product-category-item">
-                        <a class="product-category-img img-zoom-effect" href="shop.html">
-                            <img src="assets/images/product/top-category/1-2-180x180.png" alt="Top Category">
-                        </a>
-                        <div class="product-category-content pt-5">
-                            <h2 class="title">
-                                <a href="shop.html">Категория</a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-custom-col col-12 pt-4 pt-sm-0">
-                    <div class="product-category-item">
-                        <a class="product-category-img img-zoom-effect" href="shop.html">
-                            <img src="assets/images/product/top-category/1-3-180x180.png" alt="Top Category">
-                        </a>
-                        <div class="product-category-content pt-5">
-                            <h2 class="title">
-                                <a href="shop.html">Категория</a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-custom-col col-12 pt-4 pt-lg-0">
-                    <div class="product-category-item">
-                        <a class="product-category-img img-zoom-effect" href="shop.html">
-                            <img src="assets/images/product/top-category/1-4-180x180.png" alt="Top Category">
-                        </a>
-                        <div class="product-category-content pt-5">
-                            <h2 class="title">
-                                <a href="shop.html">Категория</a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-custom-col col-12 pt-4 pt-lg-0">
-                    <div class="product-category-item">
-                        <a class="product-category-img img-zoom-effect" href="shop.html">
-                            <img src="assets/images/product/top-category/1-5-180x180.png" alt="Top Category">
-                        </a>
-                        <div class="product-category-content pt-5">
-                            <h2 class="title">
-                                <a href="shop.html">Категория</a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-custom-col col-12 pt-4 pt-lg-0">
-                    <div class="product-category-item">
-                        <a class="product-category-img img-zoom-effect" href="shop.html">
-                            <img src="assets/images/product/top-category/1-6-180x180.png" alt="Top Category">
-                        </a>
-                        <div class="product-category-content pt-5">
-                            <h2 class="title">
-                                <a href="shop.html">Категория</a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
