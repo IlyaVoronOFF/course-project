@@ -27,7 +27,7 @@ class ProductController extends Controller
 
     public function shop()
     {
-        $products = Product::paginate(12);
+        $products = Product::with(['category', 'country'])->paginate(12);
         return view('shop.index',[
             'menu' => Menu::all(),
             'products' => $products,

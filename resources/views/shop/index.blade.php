@@ -327,12 +327,12 @@
                                         <div class="col-xl-4 col-sm-6 pt-6">
                                             <div class="product-item">
                                                 <div class="product-img img-zoom-effect">
-                                                    <a href="single-product-variable.html">
+                                                    <a href="{{ route('product.id',['id' => $product->id]) }}">
                                                         <img class="img-full" src="assets/images/product/medium-size/shop/1-4-290x350.jpg" alt="Product Images">
                                                     </a>
                                                 </div>
                                                 <div class="product-content">
-                                                    <a class="product-name pb-1" href="single-product-variable.html">{{ $product -> name }}</a>
+                                                    <a class="product-name pb-1" href="{{ route('product.id',['id' => $product->id]) }}">{{ $product -> name }}</a>
                                                     <div class="price-box">
                                                         <div class="price-box-holder">
                                                             <span>Price:</span>
@@ -366,6 +366,220 @@
                                                 </div>
                                             </div>
                                         </div>
+                                            <!-- Begin Modal Area -->
+                                            <div class="modal quick-view-modal fade" id="quickModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                                                 tabindex="-1" aria-labelledby="quickModal" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="modal-wrap row">
+                                                                <div class="col-lg-6">
+                                                                    <div class="modal-img">
+                                                                        <div class="swiper-container modal-slider">
+                                                                            <div class="swiper-wrapper">
+                                                                                <div class="swiper-slide">
+                                                                                    <a href="#" class="single-img">
+                                                                                        <img class="img-full" src="assets/images/product/large-size/2-1-618x578.jpg"
+                                                                                             alt="Product Image">
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                    <a href="#" class="single-img">
+                                                                                        <img class="img-full" src="assets/images/product/large-size/2-2-618x578.jpg"
+                                                                                             alt="Product Image">
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                    <a href="#" class="single-img">
+                                                                                        <img class="img-full" src="assets/images/product/large-size/2-3-618x578.jpg"
+                                                                                             alt="Product Image">
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                    <a href="#" class="single-img">
+                                                                                        <img class="img-full" src="assets/images/product/large-size/2-4-618x578.jpg"
+                                                                                             alt="Product Image">
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                    <a href="#" class="single-img">
+                                                                                        <img class="img-full" src="assets/images/product/large-size/2-5-618x578.jpg"
+                                                                                             alt="Product Image">
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="swiper-slide">
+                                                                                    <a href="#" class="single-img">
+                                                                                        <img class="img-full" src="assets/images/product/large-size/2-6-618x578.jpg"
+                                                                                             alt="Product Image">
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="thumbs-arrow-holder">
+                                                                            <div class="swiper-container modal-thumbs">
+                                                                                <div class="swiper-wrapper">
+                                                                                    <a href="#" class="swiper-slide">
+                                                                                        <img class="img-full" src="assets/images/product/large-size/2-1-618x578.jpg"
+                                                                                             alt="Product Thumnail">
+                                                                                    </a>
+                                                                                    <a href="#" class="swiper-slide">
+                                                                                        <img class="img-full" src="assets/images/product/large-size/2-2-618x578.jpg"
+                                                                                             alt="Product Thumnail">
+                                                                                    </a>
+                                                                                    <a href="#" class="swiper-slide">
+                                                                                        <img class="img-full" src="assets/images/product/large-size/2-3-618x578.jpg"
+                                                                                             alt="Product Thumnail">
+                                                                                    </a>
+                                                                                    <a href="#" class="swiper-slide">
+                                                                                        <img class="img-full" src="assets/images/product/large-size/2-4-618x578.jpg"
+                                                                                             alt="Product Thumnail">
+                                                                                    </a>
+                                                                                    <a href="#" class="swiper-slide">
+                                                                                        <img class="img-full" src="assets/images/product/large-size/2-5-618x578.jpg"
+                                                                                             alt="Product Thumnail">
+                                                                                    </a>
+                                                                                    <a href="#" class="swiper-slide">
+                                                                                        <img class="img-full" src="assets/images/product/large-size/2-6-618x578.jpg"
+                                                                                             alt="Product Thumnail">
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- Add Arrows -->
+                                                                            <div class="thumbs-button-wrap d-none d-md-block">
+                                                                                <div class="thumbs-button-prev">
+                                                                                    <i class="pe-7s-angle-left"></i>
+                                                                                </div>
+                                                                                <div class="thumbs-button-next">
+                                                                                    <i class="pe-7s-angle-right"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 pt-9 pt-lg-0">
+                                                                    <div class="single-product-content">
+                                                                        <h2 class="title mb-3">{{ $product->name }}</h2>
+                                                                        <div class="price-box pb-3">
+                                                                            <span class="new-price text-danger">{{ $product->price }} Р.</span>
+                                                                        </div>
+                                                                        <div class="rating-box-wrap pb-55">
+                                                                            <div class="rating-box">
+                                                                                <ul>
+                                                                                    <li><i class="fa fa-star"></i></li>
+                                                                                    <li><i class="fa fa-star"></i></li>
+                                                                                    <li><i class="fa fa-star"></i></li>
+                                                                                    <li><i class="fa fa-star"></i></li>
+                                                                                    <li><i class="fa fa-star"></i></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="review-status ps-4">
+                                                                                <a href="#">( 5 Customer Review )</a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="selector-wrap color-option">
+                                                                            <span class="selector-title border-bottom-0">Color</span>
+                                                                            <select class="nice-select wide border-bottom-0 rounded-0">
+                                                                                <option value="default">Dark Black With Shadow</option>
+                                                                                <option value="blue">Blue</option>
+                                                                                <option value="green">Green</option>
+                                                                                <option value="red">Red</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="selector-wrap pb-55">
+                                                                            <span class="selector-title">Size</span>
+                                                                            <select class="nice-select wide rounded-0">
+                                                                                <option value="medium">Medium Size With Screw</option>
+                                                                                <option value="large">Large Size With Screw</option>
+                                                                                <option value="small">Small Size With Screw</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <p class="short-desc mb-9">{{ $product->intro_desc }}</p>
+                                                                        <ul class="quantity-with-btn pb-9">
+                                                                            <li class="quantity">
+                                                                                <div class="cart-plus-minus">
+                                                                                    <input class="cart-plus-minus-box" value="1" type="text">
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="add-to-cart">
+                                                                                <a class="btn btn-custom-size lg-size btn-primary" href="cart.html">Add to cart</a>
+                                                                            </li>
+                                                                            <li class="wishlist-btn-wrap">
+                                                                                <a class="custom-circle-btn" href="wishlist.html">
+                                                                                    <i class="pe-7s-like"></i>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="compare-btn-wrap">
+                                                                                <a class="custom-circle-btn" href="compare.html">
+                                                                                    <i class="pe-7s-refresh-2"></i>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <div class="product-category pb-3">
+                                                                            <span class="title">SKU:</span>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <a href="#">Ch-256xl</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="product-category pb-3">
+                                                                            <span class="title">Категория :</span>
+                                                                            <ul>
+                                                                                @foreach($product->category as $category)
+                                                                                    <li>
+                                                                                        <a href="#">{{ $category->name }}</a>
+                                                                                    </li>
+                                                                                @endforeach
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="product-category product-tags pb-3">
+                                                                            <span class="title">Страна: </span>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <a href="#">{{ $product->country->name }}</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="product-category social-link align-items-center pb-lg-8">
+                                                                            <span class="title pe-3">Share:</span>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <a href="#" data-tippy="Pinterest" data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                                       data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                                        <i class="fa fa-pinterest-p"></i>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="#" data-tippy="Twitter" data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                                       data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                                        <i class="fa fa-twitter"></i>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="#" data-tippy="Tumblr" data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                                       data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                                        <i class="fa fa-tumblr"></i>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="#" data-tippy="Dribbble" data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                                       data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                                        <i class="fa fa-dribbble"></i>
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Modal Area End Here -->
                                     @endforeach
                                     </div>
                                 </div>
@@ -973,4 +1187,6 @@
             </div>
         </main>
 <!-- Main Content Area End Here -->
+
+
 @endsection
