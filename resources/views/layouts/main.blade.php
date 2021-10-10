@@ -17,24 +17,24 @@
     ============================================ -->
 
   <!-- Vendor CSS (Contain Bootstrap, Icon Fonts) -->
-  <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css" />
+  <link rel="stylesheet" href="{{ asset('assets/css/vendor/font-awesome.min.css') }}" />
   {{-- <link rel="stylesheet" href="{{ asset('assets/css/vendor/font-awesome.min.css'}}" /> --}}
-  <link rel="stylesheet" href="assets/css/vendor/Pe-icon-7-stroke.css" />
+  <link rel="stylesheet" href="{{ asset('assets/css/vendor/Pe-icon-7-stroke.css') }}" />
 
   <!-- Plugin CSS (Global Plugins Files) -->
-  <link rel="stylesheet" href="assets/css/plugins/animate.min.css">
-  <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css">
-  <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
-  <link rel="stylesheet" href="assets/css/plugins/magnific-popup.min.css" />
-  <link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css" />
+  <link rel="stylesheet" href="{{ asset('assets/css/plugins/animate.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/plugins/jquery-ui.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/plugins/swiper-bundle.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/plugins/nice-select.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/plugins/magnific-popup.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/css/plugins/ion.rangeSlider.min.css') }}" />
 
   <!-- Minify Version -->
   <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css"> -->
   <!-- <link rel="stylesheet" href="assets/css/plugins/plugins.min.css"> -->
 
   <!-- Style CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
   <!-- <link rel="stylesheet" href="assets/css/style.min.css"> -->
 
 </head>
@@ -61,7 +61,7 @@
               <div class="header-middle-wrap position-relative">
 
                 <a href="{{ route('home') }}" class="header-logo">
-                  <img src="assets/images/logo/dark_new.png" alt="Header Logo">
+                  <img src="{{ asset('assets/images/logo/dark_new.png')}}" alt="Header Logo">
                 </a>
 
                 <div class="main-menu d-none d-lg-block">
@@ -272,7 +272,7 @@
                     data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50"
                     data-tippy-arrow="true" data-tippy-theme="sharpborder"></i></a>
                 <a href="{{ route('shop') }}" class="product-item_img">
-                  <img class="img-full" src="assets/images/product/small-size/1-1-70x70.png" alt="Product Image">
+                  <img class="img-full" src="{{ asset('assets/images/product/small-size/1-1-70x70.png') }}" alt="Product Image">
                 </a>
                 <div class="product-item_content">
                   <a class="product-item_title" href="{{ route('shop') }}">Tail Light</a>
@@ -284,7 +284,7 @@
                     data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50"
                     data-tippy-arrow="true" data-tippy-theme="sharpborder"></i></a>
                 <a href="{{ route('shop') }}" class="product-item_img">
-                  <img class="img-full" src="assets/images/product/small-size/1-2-70x70.png" alt="Product Image">
+                  <img class="img-full" src="{{ asset('assets/images/product/small-size/1-2-70x70.png')}}" alt="Product Image">
                 </a>
                 <div class="product-item_content">
                   <a class="product-item_title" href="{{ route('shop') }}">Wiper Blades</a>
@@ -298,7 +298,7 @@
                     data-tippy-theme="sharpborder"></i>
                 </a>
                 <a href="{{ route('shop') }}" class="product-item_img">
-                  <img class="img-full" src="assets/images/product/small-size/1-3-70x70.png" alt="Product Image">
+                  <img class="img-full" src="{{ asset('assets/images/product/small-size/1-3-70x70.png')}}" alt="Product Image">
                 </a>
                 <div class="product-item_content">
                   <a class="product-item_title" href="{{ route('shop') }}">Suspension</a>
@@ -312,7 +312,7 @@
                     data-tippy-theme="sharpborder"></i>
                 </a>
                 <a href="{{ route('shop') }}" class="product-item_img">
-                  <img class="img-full" src="assets/images/product/small-size/1-4-70x70.png" alt="Product Image">
+                  <img class="img-full" src="{{ asset('assets/images/product/small-size/1-4-70x70.png')}}" alt="Product Image">
                 </a>
                 <div class="product-item_content">
                   <a class="product-item_title" href="{{ route('shop') }}">Air Filter</a>
@@ -326,7 +326,7 @@
                     data-tippy-theme="sharpborder"></i>
                 </a>
                 <a href="{{ route('shop') }}" class="product-item_img">
-                  <img class="img-full" src="assets/images/product/small-size/1-5-70x70.png" alt="Product Image">
+                  <img class="img-full" src="{{ asset('assets/images/product/small-size/1-5-70x70.png')}}" alt="Product Image">
                 </a>
                 <div class="product-item_content">
                   <a class="product-item_title" href="{{ route('shop') }}">Car Brakes</a>
@@ -355,14 +355,14 @@
     <!-- Begin Footer Area -->
     <div class="footer-area">
       <div class="footer-top section-space-y-axis-100 text-lavender"
-        data-bg-image="assets/images/background-img/1-4-1920x419.png">
+        data-bg-image="{{ asset('assets/images/background-img/1-4-1920x419.pn')}}'">
         <div class="container">
           <div class="row">
             <div class="col-lg-3">
               <div class="widget-item">
                 <div class="footer-logo pb-4">
                   <a href="{{ route('home') }}">
-                    <img src="assets/images/logo/light_new.png" alt="Logo">
+                    <img src="{{ asset('assets/images/logo/light_new.png')}}" alt="Logo">
                   </a>
                 </div>
                 <p class="short-desc mb-2">Lorem ipsum dolor sit amet, consectet adipisicing elit, sed do eiusmod
@@ -452,7 +452,7 @@
               </div>
               <div class="payment-method">
                 <a href="#">
-                  <img src="assets/images/payment/1.png" alt="Payment Method">
+                  <img src="{{ asset('assets/images/payment/1.png')}}" alt="Payment Method">
                 </a>
               </div>
             </div>
@@ -490,29 +490,29 @@
   <!-- Global Vendor, plugins JS -->
 
   <!-- Vendor JS -->
-  <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
-  <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="{{ asset('assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
+  <script src="{{ asset('assets/js/vendor/jquery-migrate-3.3.2.min.js') }}"></script>
+  <script src="{{ asset('assets/js/vendor/modernizr-3.11.2.min.js') }}"></script>
 
   <!--Plugins JS-->
-  <script src="assets/js/plugins/wow.min.js"></script>
-  <script src="assets/js/plugins/jquery-ui.min.js"></script>
-  <script src="assets/js/plugins/swiper-bundle.min.js"></script>
-  <script src="assets/js/plugins/jquery.nice-select.js"></script>
-  <script src="assets/js/plugins/parallax.min.js"></script>
-  <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/plugins/tippy.min.js"></script>
-  <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
-  <script src="assets/js/plugins/mailchimp-ajax.js"></script>
+  <script src="{{ asset('assets/js/plugins/wow.min.js') }}"></script>
+  <script src="{{ asset('assets/js/plugins/jquery-ui.min.js') }}"></script>
+  <script src="{{ asset('assets/js/plugins/swiper-bundle.min.js') }}"></script>
+  <script src="{{ asset('assets/js/plugins/jquery.nice-select.js') }}"></script>
+  <script src="{{ asset('assets/js/plugins/parallax.min.js') }}"></script>
+  <script src="{{ asset('assets/js/plugins/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ asset('assets/js/plugins/tippy.min.js') }}"></script>
+  <script src="{{ asset('assets/js/plugins/ion.rangeSlider.min.js') }}"></script>
+  <script src="{{ asset('assets/js/plugins/mailchimp-ajax.js') }}"></script>
 
   <!-- Minify Version -->
   <!-- <script src="assets/js/vendor.min.js"></script> -->
   <!-- <script src="assets/js/plugins.min.js"></script> -->
 
   <!--Main JS (Common Activation Codes)-->
-  <script src="assets/js/main.js"></script>
-  <!-- <script src="assets/js/main.min.js"></script> -->
+  <script src="{{ asset('assets/js/main.js') }}"></script>
+  <!-- <script src="assets/js/main.min.js')"></script> -->
 
 </body>
 

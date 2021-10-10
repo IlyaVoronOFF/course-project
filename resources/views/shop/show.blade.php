@@ -2,7 +2,7 @@
 @section('content')
         <!-- Begin Main Content Area  -->
         <main class="main-content">
-            <div class="breadcrumb-area breadcrumb-height" data-bg-image="assets/images/breadcrumb/bg/1-1-1920x400.jpg">
+            <div class="breadcrumb-area breadcrumb-height" data-bg-image="{{ asset('assets/images/breadcrumb/bg/1-1-1920x400.jpg')}}">
                 <div class="container h-100">
                     <div class="row h-100">
                         <div class="col-lg-12">
@@ -27,33 +27,33 @@
                                 <div class="swiper-container single-product-slider">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <a href="assets/images/product/large-size/2-1-618x578.jpg" class="single-img gallery-popup">
-                                                <img class="img-full" src="assets/images/product/large-size/2-1-618x578.jpg" alt="Product Image">
+                                            <a href="{{ asset('assets/images/product/large-size/2-1-618x578.jpg')}}" class="single-img gallery-popup">
+                                                <img class="img-full" src="{{ asset('assets/images/product/large-size/2-1-618x578.jpg')}}" alt="Product Image">
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="assets/images/product/large-size/2-2-618x578.jpg" class="single-img gallery-popup">
-                                                <img class="img-full" src="assets/images/product/large-size/2-2-618x578.jpg" alt="Product Image">
+                                            <a href="{{ asset('assets/images/product/large-size/2-2-618x578.jpg')}}" class="single-img gallery-popup">
+                                                <img class="img-full" src="{{ asset('assets/images/product/large-size/2-2-618x578.jpg')}}" alt="Product Image">
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="assets/images/product/large-size/2-3-618x578.jpg" class="single-img gallery-popup">
-                                                <img class="img-full" src="assets/images/product/large-size/2-3-618x578.jpg" alt="Product Image">
+                                            <a href="{{ asset('assets/images/product/large-size/2-3-618x578.jpg')}}" class="single-img gallery-popup">
+                                                <img class="img-full" src="{{ asset('assets/images/product/large-size/2-3-618x578.jpg')}}" alt="Product Image">
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="assets/images/product/large-size/2-4-618x578.jpg" class="single-img gallery-popup">
-                                                <img class="img-full" src="assets/images/product/large-size/2-4-618x578.jpg" alt="Product Image">
+                                            <a href="{{ asset('assets/images/product/large-size/2-4-618x578.jpg')}}" class="single-img gallery-popup">
+                                                <img class="img-full" src="{{ asset('assets/images/product/large-size/2-4-618x578.jpg')}}" alt="Product Image">
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="assets/images/product/large-size/2-5-618x578.jpg" class="single-img gallery-popup">
-                                                <img class="img-full" src="assets/images/product/large-size/2-5-618x578.jpg" alt="Product Image">
+                                            <a href="{{ asset('assets/images/product/large-size/2-5-618x578.jpg')}}" class="single-img gallery-popup">
+                                                <img class="img-full" src="{{ asset('assets/images/product/large-size/2-5-618x578.jpg')}}" alt="Product Image">
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="assets/images/product/large-size/2-6-618x578.jpg" class="single-img gallery-popup">
-                                                <img class="img-full" src="assets/images/product/large-size/2-6-618x578.jpg" alt="Product Image">
+                                            <a href="{{ asset('assets/images/product/large-size/2-6-618x578.jpg')}}" class="single-img gallery-popup">
+                                                <img class="img-full" src="{{ asset('assets/images/product/large-size/2-6-618x578.jpg')}}" alt="Product Image">
                                             </a>
                                         </div>
                                     </div>
@@ -151,22 +151,22 @@
                                         <div class="swiper-container single-product-thumbs">
                                             <div class="swiper-wrapper">
                                                 <a href="#" class="swiper-slide">
-                                                    <img class="img-full" src="assets/images/product/large-size/2-1-618x578.jpg" alt="Product Thumnail">
+                                                    <img class="img-full" src="{{ asset('assets/images/product/large-size/2-1-618x578.jpg')}}" alt="Product Thumnail">
                                                 </a>
                                                 <a href="#" class="swiper-slide">
-                                                    <img class="img-full" src="assets/images/product/large-size/2-2-618x578.jpg" alt="Product Thumnail">
+                                                    <img class="img-full" src="{{ asset('assets/images/product/large-size/2-2-618x578.jpg')}}" alt="Product Thumnail">
                                                 </a>
                                                 <a href="#" class="swiper-slide">
-                                                    <img class="img-full" src="assets/images/product/large-size/2-3-618x578.jpg" alt="Product Thumnail">
+                                                    <img class="img-full" src="{{ asset('assets/images/product/large-size/2-3-618x578.jpg')}}" alt="Product Thumnail">
                                                 </a>
                                                 <a href="#" class="swiper-slide">
-                                                    <img class="img-full" src="assets/images/product/large-size/2-4-618x578.jpg" alt="Product Thumnail">
+                                                    <img class="img-full" src="{{ asset('assets/images/product/large-size/2-4-618x578.jpg')}}" alt="Product Thumnail">
                                                 </a>
                                                 <a href="#" class="swiper-slide">
-                                                    <img class="img-full" src="assets/images/product/large-size/2-5-618x578.jpg" alt="Product Thumnail">
+                                                    <img class="img-full" src="{{ asset('assets/images/product/large-size/2-5-618x578.jpg')}}" alt="Product Thumnail">
                                                 </a>
                                                 <a href="#" class="swiper-slide">
-                                                    <img class="img-full" src="assets/images/product/large-size/2-6-618x578.jpg" alt="Product Thumnail">
+                                                    <img class="img-full" src="{{ asset('assets/images/product/large-size/2-6-618x578.jpg')}}" alt="Product Thumnail">
                                                 </a>
                                             </div>
                                         </div>
@@ -220,7 +220,7 @@
                                             <h4 class="heading mb-7">3 Comments</h4>
                                             <div class="blog-comment-item mb-8">
                                                 <div class="blog-comment-img">
-                                                    <img src="assets/images/blog/avatar/3-1-101x101.png" alt="User Image">
+                                                    <img src="{{ asset('assets/images/blog/avatar/3-1-101x101.png')}}" alt="User Image">
                                                 </div>
                                                 <div class="blog-comment-content pb-8">
                                                     <div class="user-meta">
@@ -232,7 +232,7 @@
                                             </div>
                                             <div class="blog-comment-item relpy-item mb-8">
                                                 <div class="blog-comment-img">
-                                                    <img src="assets/images/blog/avatar/3-2-101x101.png" alt="User Image">
+                                                    <img src="{{ asset('assets/images/blog/avatar/3-2-101x101.png')}}" alt="User Image">
                                                 </div>
                                                 <div class="blog-comment-content pb-8">
                                                     <div class="user-meta">
@@ -244,7 +244,7 @@
                                             </div>
                                             <div class="blog-comment-item">
                                                 <div class="blog-comment-img">
-                                                    <img src="assets/images/blog/avatar/3-3-101x101.png" alt="User Image">
+                                                    <img src="{{ asset('assets/images/blog/avatar/3-3-101x101.png')}}" alt="User Image">
                                                 </div>
                                                 <div class="blog-comment-content">
                                                     <div class="user-meta">
@@ -295,7 +295,7 @@
                     </div>
                 </div>
             </div>
-            <div class="background-img" data-bg-image="assets/images/background-img/1-2-1920x716.jpg">
+            <div class="background-img" data-bg-image="{{ asset('assets/images/background-img/1-2-1920x716.jpg')}}">
                 <div class="product-area product-arrow section-space-y-axis-100">
                     <div class="container">
                         <div class="section-title pb-55">
@@ -309,7 +309,7 @@
                                             <div class="product-item">
                                                 <div class="product-img img-zoom-effect">
                                                     <a href="shop.html">
-                                                        <img class="img-full" src="assets/images/product/medium-size/product-slider/1-1-290x350.jpg" alt="Product Images">
+                                                        <img class="img-full" src="{{ asset('assets/images/product/medium-size/product-slider/1-1-290x350.jpg')}}" alt="Product Images">
                                                     </a>
                                                 </div>
                                                 <div class="product-content">
@@ -351,7 +351,7 @@
                                             <div class="product-item">
                                                 <div class="product-img img-zoom-effect">
                                                     <a href="shop.html">
-                                                        <img class="img-full" src="assets/images/product/medium-size/product-slider/1-2-290x350.jpg" alt="Product Images">
+                                                        <img class="img-full" src="{{ asset('assets/images/product/medium-size/product-slider/1-2-290x350.jpg')}}" alt="Product Images">
                                                     </a>
                                                 </div>
                                                 <div class="product-content">
@@ -393,7 +393,7 @@
                                             <div class="product-item">
                                                 <div class="product-img img-zoom-effect">
                                                     <a href="shop.html">
-                                                        <img class="img-full" src="assets/images/product/medium-size/product-slider/1-3-290x350.jpg" alt="Product Images">
+                                                        <img class="img-full" src="{{ asset('assets/images/product/medium-size/product-slider/1-3-290x350.jpg')}}" alt="Product Images">
                                                     </a>
                                                 </div>
                                                 <div class="product-content">
@@ -435,7 +435,7 @@
                                             <div class="product-item">
                                                 <div class="product-img img-zoom-effect">
                                                     <a href="shop.html">
-                                                        <img class="img-full" src="assets/images/product/medium-size/product-slider/1-4-290x350.jpg" alt="Product Images">
+                                                        <img class="img-full" src="{{ asset('assets/images/product/medium-size/product-slider/1-4-290x350.jpg')}}" alt="Product Images">
                                                     </a>
                                                 </div>
                                                 <div class="product-content">
