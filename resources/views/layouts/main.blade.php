@@ -67,118 +67,6 @@
                 <div class="main-menu d-none d-lg-block">
                   <nav class="main-nav">
                     <ul>
-                      {{-- <li> --}}
-                      {{-- <a href="{{ route('home') }}">Home</a> --}}
-                      {{-- </li> --}}
-{{--                      <li class="megamenu-holder">--}}
-{{--                        <a href="{{ route('shop') }}">Категории--}}
-{{--                          <i class="pe-7s-angle-down"></i>--}}
-{{--                        </a>--}}
-{{--                        <ul class="drop-menu megamenu">--}}
-{{--                          <li>--}}
-{{--                            <span class="title">Категория 1</span>--}}
-{{--                            <ul>--}}
-{{--                              <li>--}}
-{{--                                <a href="{{ route('shop') }}">Shop Default</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="shop-grid-fullwidth.html">Shop Grid Fullwidth</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="shop-right-sidebar.html">Shop Right Sidebar</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="shop-list-fullwidth.html">Shop List Fullwidth</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a>--}}
-{{--                              </li>--}}
-{{--                            </ul>--}}
-{{--                          </li>--}}
-{{--                          <li>--}}
-{{--                            <span class="title">Категория 2</span>--}}
-{{--                            <ul>--}}
-{{--                              <li>--}}
-{{--                                <a href="single-product-variable.html">Single Product Variable</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="single-product-group.html">Single Product Group</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="single-product.html">Single Product Default</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="single-product-affiliate.html">Single Product Affiliate</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="single-product-sale.html">Single Product Sale</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="single-product-sticky.html">Single Product Sticky</a>--}}
-{{--                              </li>--}}
-{{--                            </ul>--}}
-{{--                          </li>--}}
-{{--                          <li>--}}
-{{--                            <span class="title">Категория 3</span>--}}
-{{--                            <ul>--}}
-{{--                              <li>--}}
-{{--                                <a href="my-account.html">My Account</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="login-register.html">Login | Register</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="cart.html">Shopping Cart</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="wishlist.html">Wishlist</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="compare.html">Compare</a>--}}
-{{--                              </li>--}}
-{{--                              <li>--}}
-{{--                                <a href="checkout.html">Checkout</a>--}}
-{{--                              </li>--}}
-{{--                            </ul>--}}
-{{--                          </li>--}}
-{{--                          <li>--}}
-{{--                            <div class="banner">--}}
-{{--                              <img src="assets/images/megamenu/banner/1.jpg" alt="Menu Banner">--}}
-{{--                            </div>--}}
-{{--                          </li>--}}
-{{--                        </ul>--}}
-{{--                      </li>--}}
-{{--                      <li class="drop-holder">--}}
-{{--                        <a href="{{ route('shop') }}">Категории--}}
-{{--                          <i class="pe-7s-angle-down"></i>--}}
-{{--                        </a>--}}
-{{--                        <ul class="drop-menu">--}}
-{{--                          <li>--}}
-{{--                            <a href="#">Категория 1</a>--}}
-{{--                          </li>--}}
-{{--                          <li>--}}
-{{--                            <a href="#">Категория 2</a>--}}
-{{--                          </li>--}}
-{{--                          <li>--}}
-{{--                            <a href="#">Категория 3</a>--}}
-{{--                          </li>--}}
-{{--                        </ul>--}}
-{{--                      </li>--}}
-{{--                      <li class="drop-holder">--}}
-{{--                        <a href="blog.html">Доставка</a>--}}
-{{--                      </li>--}}
-{{--                      <li class="drop-holder">--}}
-{{--                        <a href="blog.html">Оплата</a>--}}
-{{--                      </li>--}}
-{{--                      <li>--}}
-{{--                        <a href="contact.html">Контакты</a>--}}
-{{--                      </li>--}}
-{{--                      <li>--}}
-{{--                        <a href="contact.html">О&nbsp;нас</a>--}}
-{{--                      </li>--}}
                     @foreach($menu as $menuItem)
                             @if($menuItem -> id === 2)
                                 <li class="drop-holder">
@@ -294,75 +182,51 @@
             <div class="offcanvas-menu_area">
               <nav class="offcanvas-navigation">
                 <ul class="mobile-menu">
-                  <li class="menu-item-has-children">
-                    <a href="#">
-                      <span class="mm-text">На главную
-                      </span>
-                    </a>
-                  </li>
-                  <li class="menu-item-has-children">
-                    <a href="#">
-                      <span class="mm-text">Каталог
-                        <i class="pe-7s-angle-down"></i>
-                      </span>
-                    </a>
-                    <ul class="sub-menu">
-                      <li class="menu-item-has-children">
-                        <a href="#">
-                          <span class="mm-text">Категория 1
-                            <i class="pe-7s-angle-down"></i>
-                          </span>
-                        </a>
-                        <ul class="sub-menu">
-                          <li>
-                            <a href="{{ route('shop') }}">
-                              <span class="mm-text">Shop Default</span>
+                    @foreach($menu as $menuItem)
+                        @if($menuItem -> id === 2)
+                            <li class="menu-item-has-children">
+                                <a href="#">
+                                    <span class="mm-text">
+                                        {{ $menuItem -> title }}
+                                        <i class="pe-7s-angle-down"></i>
+                                    </span>
+                                </a>
+                                <ul class="sub-menu">
+                                    @foreach($menuItem->category as $category)
+                                        <li class="menu-item-has-children">
+                                            <a href="#">
+                                                <span class="mm-text">
+                                                    {{ $category->name }}
+                                                    <i class="pe-7s-angle-down"></i>
+                                                </span>
+                                            </a>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <a href="{{ route('shop') }}">
+                                                        <span class="mm-text">Shop Default</span>
 
-                            </a>
-                          </li>
-                          <li>
-                            <a href="shop-grid-fullwidth.html">
-                              <span class="mm-text">Подкатегория 2</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="menu-item-has-children">
-                        <a href="#">
-                          <span class="mm-text">Категория 2
-                            <i class="pe-7s-angle-down"></i>
-                          </span>
-                        </a>
-                        <ul class="sub-menu">
-                          <li>
-                            <a href="single-product.html">
-                              <span class="mm-text">Подкатегория 3</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="single-product-group.html">
-                              <span class="mm-text">Подкатегория 4</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children">
-                    <a href="#">
-                      <span class="mm-text">Доставка</span>
-                    </a>
-                  </li>
-                  <li class="menu-item-has-children">
-                    <a href="#">
-                      <span class="mm-text">Контакты</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="contact.html">
-                      <span class="mm-text">О нас</span>
-                    </a>
-                  </li>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="shop-grid-fullwidth.html">
+                                                        <span class="mm-text">Подкатегория 2</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                        @else
+                            <li class="menu-item-has-children">
+                                <a href="{{ $menuItem -> link }}">
+                                    <span class="mm-text">
+                                        {{ $menuItem -> title }}
+                                    </span>
+                                </a>
+                            </li>
+                        @endif
+                    @endforeach
                 </ul>
               </nav>
             </div>
