@@ -24,7 +24,17 @@ Route::get('/', function () {
         'categories' => Category::all(),
     ]);
 })->name('home');
+Route::get('/about_us', function () {
+    return view('about',[
+        'menu' =>  Menu::all()
+    ]);
+})->name('about');
 
+Route::get('/contacts', function () {
+    return view('contact',[
+        'menu' =>  Menu::all()
+    ]);
+})->name('contact');
 
 //admin
 Route::group(['prefix' => 'admin'], function () {
@@ -35,4 +45,4 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/catalog',  [ProductController::class, 'shop'])->name('shop');
-Route::get('/{id}', [ProductController::class, 'show'])->name('product.id');
+Route::get('/product={id}', [ProductController::class, 'show'])->name('product.id');

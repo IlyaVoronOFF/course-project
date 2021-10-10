@@ -1,4 +1,4 @@
-@extends('layouts.main');
+@extends('layouts.main')
 @section('content')
         <!-- Begin Main Content Area -->
         <div class="breadcrumb-area breadcrumb-height" data-bg-image="assets/images/breadcrumb/bg/1-1-1920x400.jpg">
