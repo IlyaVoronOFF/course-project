@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Country;
+use App\Models\Image;
 use App\Models\Menu;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -28,7 +29,7 @@ class ProductController extends Controller
     public function shop()
     {
         $products = Product::with(['category', 'country'])->paginate(12);
-        return view('shop.index',[
+        return view('shop.index', [
             'menu' => Menu::all(),
             'products' => $products,
         ]);
@@ -64,12 +65,27 @@ class ProductController extends Controller
             'categories_id' => ['required'],
             'country_id' => ['required', 'integer'],
             'price' => ['required', 'integer'],
-            'published' => ['boolean']
+            'published' => ['boolean'],
+            'image' => ['nullable', 'file']
         ]);
 
         $data = $request->only('name', 'intro_desc', 'description', 'country_id', 'price', 'published');
 
         DB::beginTransaction();
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $fileName = md5($file->getClientOriginalName() . time());
+            $fileExt = $file->getClientOriginalExtension();
+            $newFileName = $fileName . '.' . $fileExt;
+
+            $dataImage['name'] = $file->storeAs('images', $newFileName, 'public');
+
+            $image = Image::create($dataImage);
+            if ($image) {
+                $data['image_id'] = $image->id;
+            }
+        }
 
         $product = Product::create($data);
 
@@ -89,7 +105,6 @@ class ProductController extends Controller
 
         DB::rollBack();
         return back()->with('fail', 'Ошибка добавления товара');
-
     }
 
     /**
@@ -101,16 +116,16 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
-        if ($product){
+        if ($product) {
             $categories = $product->category;
             $country = $product->country;
             return view('shop.show', [
-                'product'=>$product,
-                'categories'=>$categories,
-                'country'=>$country,
+                'product' => $product,
+                'categories' => $categories,
+                'country' => $country,
                 'menu' =>  Menu::all()
             ]);
-        } else return view('404',[
+        } else return view('404', [
             'menu' =>  Menu::all()
         ]);
     }
@@ -137,7 +152,6 @@ class ProductController extends Controller
             'product' => $product,
             'countries' => $countries
         ]);
-
     }
 
     /**
@@ -162,9 +176,27 @@ class ProductController extends Controller
         $data = $request->only('name', 'intro_desc', 'description', 'country_id', 'price');
         $data['published'] = $request->published ?? 0;
 
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $fileName = md5($file->getClientOriginalName() . time());
+            $fileExt = $file->getClientOriginalExtension();
+            $newFileName = $fileName . '.' . $fileExt;
+
+            $dataImage['name'] = $file->storeAs('images', $newFileName, 'public');
+
+            $image = Image::create($dataImage);
+            if ($image) {
+                $data['image_id'] = $image->id;
+            }
+        }
+
+        $oldImageId = $product->image_id;
         $updateStatus = $product->fill($data)->save();
 
         if ($updateStatus) {
+            $oldImage = Image::find($oldImageId);
+            $oldImage->delete();
+
             $insertData = [];
             foreach ($request->categories_id as $categoryId) {
                 $insertData[] = ['category_id' => $categoryId, 'product_id' => $product->id];

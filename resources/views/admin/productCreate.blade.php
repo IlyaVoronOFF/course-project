@@ -2,7 +2,7 @@
 
 @section('main')
 
-<div class="page-content">
+  <div class="page-content">
     <h1>Добавление нового товара</h1>
     <br>
 
@@ -16,8 +16,8 @@
       </div>
     @endif
     @if (session('fail'))
-    <div class="alert alert-danger" role="alert">
-          {{ session('fail') }}
+      <div class="alert alert-danger" role="alert">
+        {{ session('fail') }}
       </div>
     @endif
 
@@ -43,11 +43,13 @@
       </div>
       <div class="form-group">
         <label for="product-description">Описание</label>
-        <textarea class="form-control" id="product-description" name="description" rows="5">{{ old('description') }}</textarea>
+        <textarea class="form-control" id="product-description" name="description"
+          rows="5">{{ old('description') }}</textarea>
       </div>
       <div class="form-group">
         <label for="product-price">Цена</label>
-        <input type="number" class="form-control" id="product-price" name="price" min="0" step="1" value="{{ old('price') }}">
+        <input type="number" class="form-control" id="product-price" name="price" min="0" step="1"
+          value="{{ old('price') }}">
       </div>
       <div class="form-group">
         <label for="product-country">Страна-производитель</label>
@@ -59,14 +61,38 @@
           @endforeach
         </select>
       </div>
+      <div class="form-group">
+        <label for="product-image">Картинка</label>
+        <input id="product-img-input" type="file" class="form-control-file" id="product-image" name="image"
+          accept="image/*">
+        <img id="product-img" src="..." class="img-thumbnail d-none admin-product-image" alt="image">
+      </div>
       <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="product-published"  name="published" value="1" @if (null !== old('published')) checked @endif>
+        <input type="checkbox" class="form-check-input" id="product-published" name="published" value="1"
+          @if (null !== old('published')) checked @endif>
         <label class="form-check-label" for="product-published">Опубликован</label>
       </div>
       <button type="submit" class="btn btn-primary">Добавить</button>
     </form>
 
 
-</div>
+  </div>
 
 @endsection
+
+@push('js-image-upload')
+  <script>
+    const imageInput = document.querySelector('#product-img-input');
+    const imageEl = document.querySelector('#product-img');
+    imageInput.addEventListener('input', e => {
+      if (e.target.files[0]) {
+        const file = e.target.files[0];
+        imageEl.onload = () => {
+          imageEl.classList.remove('d-none');
+          URL.revokeObjectURL(imageEl.src);
+        }
+        imageEl.src = URL.createObjectURL(file);
+      }
+    });
+  </script>
+@endpush

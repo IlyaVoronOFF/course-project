@@ -182,6 +182,7 @@
   <script src="{{ asset('js/admin/app.js') }}"></script>
 
   @stack('js-products')
+  @stack('js-image-upload')
 
 </body>
 

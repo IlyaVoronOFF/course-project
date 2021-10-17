@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\UserController;
-use App\Models\Category;
 use App\Models\Menu;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,19 +20,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home',[
+    return view('home', [
         'menu' =>  Menu::all(),
         'categories' => Category::all(),
     ]);
 })->name('home');
 Route::get('/about_us', function () {
-    return view('about',[
+    return view('about', [
         'menu' =>  Menu::all()
     ]);
 })->name('about');
 
 Route::get('/contacts', function () {
-    return view('contact',[
+    return view('contact', [
         'menu' =>  Menu::all()
     ]);
 })->name('contact');
@@ -46,3 +47,8 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/catalog',  [ProductController::class, 'shop'])->name('shop');
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.id');
+
+// Необходимо, если не работают линки с помощью php artisan storage:link
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link'); // this will do the command line job
+});
