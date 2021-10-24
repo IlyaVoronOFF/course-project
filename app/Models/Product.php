@@ -22,4 +22,9 @@ class Product extends Model
     {
         return $this->belongsTo(Country::class);
     }
+
+    public function image()
+    {
+        return $this->belongsTo(Image::class);
+    }
 }

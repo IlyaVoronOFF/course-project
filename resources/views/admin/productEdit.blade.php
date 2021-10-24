@@ -2,7 +2,7 @@
 
 @section('main')
 
-<div class="page-content">
+  <div class="page-content">
     <h1>Изменение товара</h1>
     <br>
 
@@ -16,8 +16,8 @@
       </div>
     @endif
     @if (session('fail'))
-    <div class="alert alert-danger" role="alert">
-          {{ session('fail') }}
+      <div class="alert alert-danger" role="alert">
+        {{ session('fail') }}
       </div>
     @endif
 
@@ -40,15 +40,18 @@
       </div>
       <div class="form-group">
         <label for="product-intro">Краткое описание</label>
-        <textarea class="form-control" id="product-intro" name="intro_desc" rows="1">{{ $product->intro_desc }}</textarea>
+        <textarea class="form-control" id="product-intro" name="intro_desc"
+          rows="1">{{ $product->intro_desc }}</textarea>
       </div>
       <div class="form-group">
         <label for="product-description">Описание</label>
-        <textarea class="form-control" id="product-description" name="description" rows="5">{{ $product->description }}</textarea>
+        <textarea class="form-control" id="product-description" name="description"
+          rows="5">{{ $product->description }}</textarea>
       </div>
       <div class="form-group">
         <label for="product-price">Цена</label>
-        <input type="number" class="form-control" id="product-price" name="price" min="0" step="1" value="{{ intval($product->price) }}">
+        <input type="number" class="form-control" id="product-price" name="price" min="0" step="1"
+          value="{{ intval($product->price) }}">
       </div>
       <div class="form-group">
         <label for="product-country">Страна-производитель</label>
@@ -60,14 +63,42 @@
           @endforeach
         </select>
       </div>
+
+      <div class="form-group">
+        <label for="product-image">Картинка</label>
+        <input id="product-img-input" type="file" class="form-control-file" id="product-image" name="image"
+          accept="image/*">
+      </div>
+      @isset($product->image)
+        <img id="product-img" src="{{ Storage::disk('local')->url($product->image->name) }}"
+          class="img-thumbnail admin-product-image" alt="image">
+      @endisset
       <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="product-published"  name="published" value="1" @if ($product->published === 1) checked @endif>
+        <input type="checkbox" class="form-check-input" id="product-published" name="published" value="1"
+          @if ($product->published === 1) checked @endif>
         <label class="form-check-label" for="product-published">Опубликован</label>
       </div>
       <button type="submit" class="btn btn-primary">Изменить</button>
     </form>
 
 
-</div>
+  </div>
 
 @endsection
+
+@push('js-image-upload')
+  <script>
+    const imageInput = document.querySelector('#product-img-input');
+    const imageEl = document.querySelector('#product-img');
+    imageInput.addEventListener('input', e => {
+      if (e.target.files[0]) {
+        const file = e.target.files[0];
+        imageEl.onload = () => {
+          imageEl.classList.remove('d-none');
+          URL.revokeObjectURL(imageEl.src);
+        }
+        imageEl.src = URL.createObjectURL(file);
+      }
+    });
+  </script>
+@endpush
