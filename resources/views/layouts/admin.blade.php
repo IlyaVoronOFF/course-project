@@ -30,7 +30,7 @@
         <div class="d-flex">
           <!-- LOGO -->
           <div class="navbar-brand-box">
-            <a href="{{ route('admin') }}" class="logo logo-light">
+            <a href="{{ route('home') }}" class="logo logo-light">
               <span class="logo-sm">
                 <img src="{{ asset('assets/images/admin/logo-sm.png') }}" alt="" height="40">
               </span>
@@ -102,7 +102,7 @@
                   class="mdi mdi-lock-open-outline font-size-17 align-middle mr-1"></i>
                 Заблокировать экран</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item text-danger" href="#"><i
+              <a class="dropdown-item text-danger" href="{{ route('logout') }}"><i
                   class="bx bx-power-off font-size-17 align-middle mr-1 text-danger"></i>
                 Выйти</a>
             </div>

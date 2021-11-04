@@ -25,7 +25,7 @@ class UsersSeeder extends Seeder
                 'lastname' => 'Иванов',
                 'email' => 'ivan@bk.ru',
                 'login' => 'ivan',
-                'password_hash' => '1111',
+                'password' => '$2a$10$eBYdAAo1VYmE9GayOEN3p.d32PylIGcP1YMlvQQPB8rFJDO3sMkbS', // 1111
                 'role_id' => 1,
             ],
             [
@@ -33,7 +33,7 @@ class UsersSeeder extends Seeder
                 'lastname' => 'Егоров',
                 'email' => 'egor@bk.ru',
                 'login' => 'egor',
-                'password_hash' => '2222',
+                'password' => '$2a$10$tjj.IjrpQc/gJF7xLFsm3OO2ZHgm4M.r.7aL5Fo2fDAvJDlNWrxwS', // 2222
                 'role_id' => 2,
             ],
             [
@@ -41,7 +41,7 @@ class UsersSeeder extends Seeder
                 'lastname' => 'Павлов',
                 'email' => 'pavel@bk.ru',
                 'login' => 'pavel',
-                'password_hash' => '3333',
+                'password' => '$2a$10$kEUwWRtpZNhDaUbokXAXdeyZxZJO1zL14ous8t227qAauEuHMc5aq', // 3333
                 'role_id' => 3,
             ],
             [
@@ -49,7 +49,7 @@ class UsersSeeder extends Seeder
                 'lastname' => 'Васильев',
                 'email' => 'vasya@bk.ru',
                 'login' => 'vasya',
-                'password_hash' => '4444',
+                'password' => '$2a$10$oTbe7mDnZfZsgjm.pkMgY.o.agsE79Rcw4lT7ydR7joH.6lSlXJ76', // 4444
                 'role_id' => 3,
             ],
         ];

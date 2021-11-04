@@ -15,9 +15,9 @@ class CreateUsersTable extends Migration
             $table->string('firstname', 65);
             $table->string('lastname', 65);
             $table->bigInteger('phone',)->unsigned()->nullable()->default(NULL);
-            $table->string('email', 65);
+            $table->string('email', 65)->unique();
             $table->string('login', 45);
-            $table->string('password_hash', 100);
+            $table->string('password', 100);
             $table->unsignedInteger('role_id',)->default(1);
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));

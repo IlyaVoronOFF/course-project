@@ -98,27 +98,22 @@
                         <i class="pe-7s-user"></i>
                       </button>
                       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingButton">
-                        <li><a class="dropdown-item" href="my-account.html">Аккаунт</a></li>
+                        
+                        @if (Auth::check())
+                          @php
+                            $user = Auth::user();
+                            $userName = $user->lastname . ' ' . $user->firstname;
+                          @endphp
+                          <li class="text-center">{{ $userName }}</li>
+                          <li><a class="dropdown-item" href="#">Аккаунт</a></li>
                           <li><a class="dropdown-item" href="{{ route('admin') }}">Админка</a></li>
-                        <li><a class="dropdown-item" href="login-register.html">Войти | Регистрация</a></li>
+                        @endif
+                        @if (Auth::check())
+                          <li><a class="dropdown-item" href="{{ route('logout') }}">Выйти</a></li>
+                        @else 
+                          <li><a class="dropdown-item" href="{{ route('login') }}">Войти | Регистрация</a></li>
+                        @endif
                       </ul>
-                    </li>
-                    <li>
-                      <a href="#exampleModal" class="search-btn bt" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        <i class="pe-7s-search"></i>
-                      </a>
-                    </li>
-                    <li class="d-none d-lg-block">
-                      <a href="wishlist.html">
-                        <i class="pe-7s-like"></i>
-                      </a>
-                    </li>
-                    <li class="minicart-wrap me-3 me-lg-0">
-                      <a href="#miniCart" class="minicart-btn toolbar-btn">
-                        <i class="pe-7s-shopbag"></i>
-                        <span class="quantity">5</span>
-                      </a>
                     </li>
                     <li class="mobile-menu_wrap d-block d-lg-none">
                       <a href="#mobileMenu" class="mobile-menu_btn toolbar-btn pl-0">
