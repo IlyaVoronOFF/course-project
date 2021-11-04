@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +40,7 @@ Route::get('/contacts', function () {
 
 //admin
 Route::group(['prefix' => 'admin'], function () {
-    Route::view('/', 'admin.index')->name('admin');
+    Route::view('/', 'admin.index')->name('admin')->middleware(['auth', 'admin']);
     Route::resource('users', UserController::class);
     Route::resource('orders', OrderController::class);
     Route::resource('products', ProductController::class);
@@ -47,6 +48,13 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/catalog',  [ProductController::class, 'shop'])->name('shop');
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.id');
+Route::get('/login', function() {
+    return view('login-register', ['menu' => Menu::all()]);
+})->name('login');
+
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/register', [LoginController::class, 'registration']);
+Route::get('/logout', [LoginController::class, 'logout']);
 
 // Необходимо, если не работают линки с помощью php artisan storage:link
 Route::get('/linkstorage', function () {
