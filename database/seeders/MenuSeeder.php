@@ -27,7 +27,7 @@ class MenuSeeder extends Seeder
 
             ],
             [
-                'title' => 'Каталог товаров',
+                'title' => 'Каталог',
                 'link' => '/catalog',
                 'alias' => 'catalog_products',
             ],

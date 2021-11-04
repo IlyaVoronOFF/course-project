@@ -40,7 +40,7 @@ Route::get('/contacts', function () {
 
 //admin
 Route::group(['prefix' => 'admin'], function () {
-    Route::view('/', 'admin.index')->name('admin');
+    Route::view('/', 'admin.index')->name('admin')->middleware(['auth', 'admin']);
     Route::resource('users', UserController::class);
     Route::resource('orders', OrderController::class);
     Route::resource('products', ProductController::class);

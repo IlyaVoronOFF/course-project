@@ -47,6 +47,6 @@ class User extends Authenticatable implements CanResetPassword
 
     public function isAdmin()
     {
-        return $this->role_id === '1';
+        return $this->role_id === 1;
     }
 }

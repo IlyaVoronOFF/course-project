@@ -104,9 +104,11 @@
                             $user = Auth::user();
                             $userName = $user->lastname . ' ' . $user->firstname;
                           @endphp
-                          <li class="text-center">{{ $userName }}</li>
-                          <li><a class="dropdown-item" href="#">Аккаунт</a></li>
-                          <li><a class="dropdown-item" href="{{ route('admin') }}">Админка</a></li>
+                            <li class="text-center h5">{{ $userName }}</li>
+                            <li><a class="dropdown-item" href="#">Аккаунт</a></li>
+                          @if (Auth::user()->isAdmin())
+                            <li><a class="dropdown-item" href="{{ route('admin') }}">Админка</a></li>
+                          @endif
                         @endif
                         @if (Auth::check())
                           <li><a class="dropdown-item" href="{{ route('logout') }}">Выйти</a></li>
@@ -134,9 +136,11 @@
               <a href="#" class="button-close"><i class="pe-7s-close"></i></a>
             </div>
             <div class="offcanvas-user-info text-center px-6 pb-5">
+              @if (Auth::check())
               <div class=" text-silver">
-                <p class="shipping mb-0">Бесплатная доставка при заказе от <span class="text-primary">$200</span></p>
+                <p class="h4">{{ $userName }}</p>
               </div>
+              @endif
               <ul class="dropdown-wrap justify-content-center text-silver">
                 <li class="dropdown dropup">
                   <button class="btn btn-link dropdown-toggle ht-btn" type="button" id="languageButtonTwo"
@@ -163,8 +167,17 @@
                     <i class="pe-7s-users"></i>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingButtonTwo">
-                    <li><a class="dropdown-item" href="my-account.html">Аккаунт</a></li>
-                    <li><a class="dropdown-item" href="login-register.html">Войти | Регистрация</a></li>
+                    @if (Auth::check())
+                      <li><a class="dropdown-item" href="#">Аккаунт</a></li>
+                      @if (Auth::user()->isAdmin())
+                        <li><a class="dropdown-item" href="{{ route('admin') }}">Админка</a></li>
+                      @endif
+                    @endif
+                    @if (Auth::check())
+                      <li><a class="dropdown-item" href="{{ route('logout') }}">Выйти</a></li>
+                    @else 
+                      <li><a class="dropdown-item" href="{{ route('login') }}">Войти | Регистрация</a></li>
+                    @endif
                   </ul>
                 </li>
                 <li>
